@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Home</title>
+</head>
+	<body data-gr-c-s-loaded="true">
+	
+	
+	
+	
+	<table align="center" width="100%" border="0" >
+		<tbody align="center">
+		<tr>
+			<td>
+				<h1>Welcome Bob!</h1>
+				
+			</td>
+			
+		</tr>
+	</tbody></table>
+	
+	
+<p align="center"><a href="profile.html"><font>Profile</font></a></p>
+<p align="center"><a href="changepass.html"><font>Change Password</font></a></p>
+
+<div id="demo">
+  <p align="center"><a href="index.html"><button type="button" onclick="loadDoc()">View User</button></a></p>
+  
+</div>
+
+
+<p align="center"><a href="logout.html"><font>Logout</font></a></p>		
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "index.txt", true);
+  xhttp.send();
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "ajax_info.txt", true);
+  xhttp.send();
+}
+</script>
+
